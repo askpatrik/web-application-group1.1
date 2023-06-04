@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var topicDisplayNames = ViewBag.TopicDisplayNames;
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -22,8 +26,34 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                       
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["Halsa"]</a>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["SamhalleKonflikter"]</a>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["Miljo"]</a>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["VetenskapTeknik"]</a>
+                        </li>
+                         </li>
+                          <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["LivsstillFritt"]</a>
+                        </li>
+                         </li>
+                          <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["Ekonomi"]</a>
+                        </li>
+                         </li>
+                          <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["Religion"]</a>
+                        </li>
+                         </li>
+                          <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["Idrott"]</a>
                         </li>
                     </ul>
                 </div>
