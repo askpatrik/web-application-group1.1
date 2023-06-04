@@ -188,6 +188,19 @@ namespace JensensWebApp.Controllers
                     break;
             }
 
+                Dictionary<string, string> topicDisplayNames = new Dictionary<string, string>
+{
+    {"Halsa", "Hälsa"},
+    {"SamhalleKonflikter", "Samhälle och Konflikter"},
+    {"Miljo", "Miljö"},
+    {"VetenskapTeknik", "Vetenskap och Teknik"},
+    {"LivsstillFritt", "Livsstil och Fritid"},
+    {"Ekonomi", "Ekonomi"},
+    {"Religion", "Religion"},
+    {"Idrott", "Idrott"}
+};
+  ViewBag.TopicDisplayNames = topicDisplayNames;
+
             return View(articles);
         }
 

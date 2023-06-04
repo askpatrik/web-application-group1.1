@@ -2,8 +2,8 @@
 
 @{
     ViewBag.Title = "Articles";
-
-    Dictionary<string, string> topicDisplayNames = new Dictionary<string, string>
+ var topicDisplayNames = ViewBag.TopicDisplayNames as Dictionary<string, string>;
+    @* Dictionary<string, string> topicDisplayNames = new Dictionary<string, string>
 {
     {"Halsa", "Hälsa"},
     {"SamhalleKonflikter", "Samhälle och Konflikter"},
@@ -13,7 +13,7 @@
     {"Ekonomi", "Ekonomi"},
     {"Religion", "Religion"},
     {"Idrott", "Idrott"}
-};
+}; *@
 
 }
 
