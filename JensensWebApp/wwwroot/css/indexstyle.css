@@ -1,0 +1,8 @@
+p{ 
+    color: rgb(46, 73, 206);
+    font-size: large;
+}
+
+.card-body {
+    background-color: rgb(244, 248, 244);
+}
