@@ -6,3 +6,12 @@ p{
 .card-body {
     background-color: rgb(244, 248, 244);
 }
+.card-img-top{
+    width: 100%;
+    height: auto;
+}
+.card-title.main-news-title{
+    font-size: 50px;
+}
+
+

@@ -6,6 +6,45 @@
  var topicDisplayNames = ViewBag.TopicDisplayNames as Dictionary<string, string>;
 }
 
+<div class="row mt-4">
+    <div class="col-md-7">
+        <div class="card mb-4">
+            <img src="Pictures/News.webp" alt="Bildbeskrivning" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title main-news-title">@Model[0].Title</h5>
+                <p class="card-text main-news-summary">@Model[0].Summary</p>
+                <a href="@Model[0].Link" class="card-link main-news-read-more" target="_blank">To article</a>
+                <p class="card-text main-news-published"><small class="text-muted">@Model[0].Published.ToString("yyyy-MM-dd HH:mm:ss")</small></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5">
+   
+   <div class="col-md-5">
+  
+</div>
+
+  <table class="table">
+    <tbody>
+        <tr><h1>BREAKING NEWS</h1></tr>
+      @foreach (var article in Model.Take(4))
+      {
+        <tr>
+          <td>@article.Title</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  
+        <!-- Här kan du inkludera innehållet för den högra kolumnen -->
+        <!-- Lägg till dina önskade element och innehåll här -->
+    </div>
+</div>
+
+
+        
+
 
 <div class="row mt-4">
     <div class="col-md-7">
@@ -21,6 +60,7 @@
             </div>
         }
     </div>
+
     <div class="col-md-4">
         <!-- Här kan du inkludera innehållet för den högra kolumnen (sidobodyn) -->
   @foreach (var article in Model)
