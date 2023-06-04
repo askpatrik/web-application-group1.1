@@ -1,0 +1,5 @@
+# Ignorera Visual Studio Code debug-konfigurationsfilen
+launch.json
+
+# Ignorera Visual Studio Code tasks-konfigurationsfilen
+tasks.json
