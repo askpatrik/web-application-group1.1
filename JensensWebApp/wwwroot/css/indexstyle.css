@@ -1,4 +1,4 @@
-p{ 
+p {
     color: rgb(46, 73, 206);
     font-size: large;
 }
@@ -6,12 +6,42 @@ p{
 .card-body {
     background-color: rgb(244, 248, 244);
 }
-.card-img-top{
+
+.card-img-top {
     width: 100%;
     height: auto;
 }
-.card-title.main-news-title{
-    font-size: 50px;
+
+.card-title.main-news-title {
+    font-size: 42px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+.main-news-read-more {
+    text-decoration: none;
+    color: black;
+}
 
+.main-news-read-more:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.breaking-news-banner {
+    background-color: rgb(161, 48, 48);
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+.table{
+   
+    color: rgb(0, 0, 0);
+   
+}
+.card-title-2{
+    background-color: rgb(161, 48, 48);
+    color: white;
+    text-align: center;
+}
