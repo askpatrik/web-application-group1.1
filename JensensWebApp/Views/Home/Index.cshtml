@@ -5,18 +5,18 @@
     ViewBag.Title = "Articles";
  var topicDisplayNames = ViewBag.TopicDisplayNames as Dictionary<string, string>;
 }
-<div class="container">
+
 <!-- Main Article RAD 1-->
 <div class="row mt-5 ">
     <div class="col-md-8">
         <div class="card mb-4">
-            <div class="breaking-news-banner">HUVUDNYHETER</div>
+            <div class="main-news-banner">HUVUDNYHETER</div>
             <a href="@Model[0].Link" target="_blank" class="card-link main-news-read-more">
                 <img src="Pictures/News.webp" alt="Bildbeskrivning" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title main-news-title">@Model[0].Title</h5>
                     <p class="card-text main-news-summary">@Model[0].Summary</p>
-                    <p class="card-text main-news-published"><small class="text-muted">@Model[0].Published.ToString("yyyy-MM-dd HH:mm:ss")</small></p> 
+                    
                 </div>
                 
             </a>
@@ -24,32 +24,33 @@
         </div>
     </div>
 
-
-    
-<!-- Breaking news RAD 1 -->
-    <div class="col-md-4">
-     
-     <div class="card">
-    <div class="card-body">
-        <h5 class="card-title-2">Senaste Nytt</h5>
-        <table class="table">
-            <tbody>
-                @foreach (var article in Model.Take(10))
-                {
-                    <tr>
-                        <td>@article.Title</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+<!-- Senaste nytt RAD 1 -->
+<div class="col">
+    <div class="card">
+         <div class="card-title-2">SENASTE NYTT</div>
+        <div class="card-body">
+           
+            <table class="table">
+                <tbody>
+                    @foreach (var article in Model.Take(10))
+                    {
+                        <tr>
+                            <td class="td-style"><a href="@article.Link">@article.Title</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
 
 
-<!-- Annat RAD 1 -->
+
+
+<!-- Form RAD 1 -->
 <div class="card mt-4">
+    <div class="card-title-2">SÖK NYHETER</div>
     <div class="card-body">
-        <h2>Implementera en form här av något slag</h2>
+      
         <div class="container">
             @using (Html.BeginForm("Index", "Home", FormMethod.Get))
             {
@@ -82,47 +83,33 @@
 
 
 <!-- Mellanstora artiklar RAD 2-->
-<div class="row mt-2">
-    <div class="col-md-4 me-3">
-        @foreach (var article in Model)
+<div class="col-md-8">
+    <div class="row">
+        @foreach (var article in Model.Take(6))
         {
-            <div class="card mb-4">
-
-
-                 <img src="Pictures/News.webp" alt="Bildbeskrivning" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">@article.Title</h5>
-                    <p class="card-text">@article.Summary</p>
-                    <a href="@article.Link" class="card-link" target="_blank">Read More</a>
-                    <p class="card-text"><small class="text-muted">@article.Published.ToString("yyyy-MM-dd HH:mm:ss")</small></p>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <img src="Pictures/News.webp" alt="Bildbeskrivning" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">@article.Title</h5>
+                        <p class="card-text">@article.Summary</p>
+                        <a href="@article.Link" class="card-link" target="_blank">Read More</a>
+                        <p class="card-text"><small class="text-muted">@article.Published.ToString("yyyy-MM-dd HH:mm:ss")</small></p>
+                    </div>
                 </div>
             </div>
         }
-        
     </div>
+</div>
 
-<div class="col-md-4">
-   @foreach (var article in Model)
-        {
-            <div class="card mb-4">
-                 <img src="Pictures/News.webp" alt="Bildbeskrivning" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">@article.Title</h5>
-                    <p class="card-text">@article.Summary</p>
-                    <a href="@article.Link" class="card-link" target="_blank">Read More</a>
-                    <p class="card-text"><small class="text-muted">@article.Published.ToString("yyyy-MM-dd HH:mm:ss")</small></p>
-                </div>
-            </div>
-        }
-      </div>
-    
 
 <!-- Sidobody med mindre artiklar RAD 2-->
-    <div class="col-md-3">
+    <div class="col">
       
-  @foreach (var article in Model)
+  @foreach (var article in Model.Take(3))
         {
             <div class="card mb-4">
+                  <div class="card-title-2"></div>
                 <div class="card-body adjust">
                     <h5 class="card-title">@article.Title</h5>
                     <p class="card-text">@article.Summary</p>
@@ -144,27 +131,3 @@
 
 
  
-
-    <div class="container">
-    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
-    {
-        <label for="topic">Select a topic:</label>
-        <select id="topic" name="topic" class="form-select">
-            <option value="">All</option>
-            @foreach (var topic in topicDisplayNames)
-            {
-                <option value="@topic.Key">@topic.Value</option>
-            }
-        </select>
-
-        <label for="sortBy">Sort by:</label>
-        <select id="sortBy" name="sortBy" class="form-select">
-            <option value="">Default</option>
-            <option value="newest">Newest to Oldest</option>
-            <option value="oldest">Oldest to Newest</option>
-        </select>
-
-        <button type="submit" class="btn btn-primary">Filter</button>
-    }
-</div>
-</div>

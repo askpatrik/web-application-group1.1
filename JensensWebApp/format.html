@@ -1,0 +1,71 @@
+
+<!--RAD 1 -->
+
+<!--RAD 1: Huvudnyheter -->
+<div class="row mt-5 ">
+    <div class="col-md-8">
+        <div class="card mb-4">
+            <div class="breaking-news-banner">HUVUDNYHETER</div>
+            <a href="@Model[0].Link" target="_blank"
+                class="card-link main-news-read-more">
+                <img src="Pictures/News.webp" alt="Bildbeskrivning"
+                    class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title main-news-title">@Model[0].Title</h5>
+                    <p class="card-text main-news-summary">@Model[0].Summary</p>
+                    <p class="card-text main-news-published"><small
+                            class="text-muted">@Model[0].Published.ToString("yyyy-MM-dd HH:mm:ss")</small></p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!--RAD 1: Senaste Nytt -->
+    <div class="col-md-4">
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title-2">Senaste Nytt</h5>
+                <table class="table">
+                    <tbody>
+                        @foreach (var article in Model.Take(10))
+                        {
+                        <tr>
+                            <td>@article.Title</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!--RAD 1: Form -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h2>Implementera en form här av något slag</h2>
+                <div class="container">
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                    {
+                    <label for="topic">Select a topic:</label>
+                    <select id="topic" name="topic" class="form-select">
+                        <option value>All</option>
+                        @foreach (var topic in topicDisplayNames)
+                        {
+                        <option value="@topic.Key">@topic.Value</option>
+                        }
+                    </select>
+
+                    <label for="sortBy">Sort by:</label>
+                    <select id="sortBy" name="sortBy" class="form-select">
+                        <option value>Default</option>
+                        <option value="newest">Newest to Oldest</option>
+                        <option value="oldest">Oldest to Newest</option>
+                    </select>
+
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
