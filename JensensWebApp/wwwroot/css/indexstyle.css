@@ -7,12 +7,12 @@ p {
     background-color: rgb(244, 248, 244);
 }
 
-.card-img-top {
+.main-news-img {
     width: 100%;
     height: auto;
 }
 
-.card-title.main-news-title {
+.main-news-title {
     font-size: 42px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -27,7 +27,7 @@ p {
     color: black;
 }
 
-.breaking-news-banner {
+.main-news-banner {
     background-color: rgb(161, 48, 48);
     font-size: 50px;
     color: white;
@@ -43,5 +43,18 @@ p {
 .card-title-2{
     background-color: rgb(161, 48, 48);
     color: white;
+    font-size: 25px;
     text-align: center;
+    font-weight: bold;
+    padding: 10px;
 }
+
+.container{
+
+
+}
+.td-style{
+    font-size: 16px;
+}
+
+
