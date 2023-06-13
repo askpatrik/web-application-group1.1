@@ -58,3 +58,23 @@ p {
 }
 
 
+
+#quote
+{
+    color: blue;
+    background-color: white; 
+    font-size: 16px; 
+    padding: 10px 20px; 
+    border: none; 
+    text-align: center;
+}
+.buttonQuote {
+    color: white;
+    background-color: blue; 
+    font-size: 16px; 
+    padding: 20px 20px; 
+    border: none; 
+    margin-left: 60px;
+    
+    
+}
