@@ -93,14 +93,17 @@
     </div>
 
 <!-- ReklamCarousel-->
-<div class="col-4">
+<div class="col-8">
     <div class="ad-carousel">
-        <div class="ad-container">
+        <div id="adContainer" class="ad-container">
         <img src="Pictures/ad1.png" alt="Reklam 1">
-         <img src="Pictures/ad2.jpg" alt="Reklam 1">
+         <img src="Pictures/ad2.jpg" alt="Reklam 2">
+          <img src="Pictures/ad3.png" alt="Reklam 3">
+         <img src="Pictures/ad4.jpg" alt="Reklam 4">
         </div>
     </div>
 </div>
+
 
 <!-- Mellanstora artiklar RAD 2-->
 <div class="col-md-8">
@@ -143,6 +146,16 @@
 </div>
 
    <script>
+        // Reklam-carousel stannar när man hovrar över den 
+        var carousel = document.getElementById('adContainer');
+        carousel.addEventListener("mouseenter", function() {
+        carousel.style.animationPlayState = "paused";
+            });
+        carousel.addEventListener('mouseleave', function() {        
+        carousel.style.animationPlayState = 'running';
+            });
+
+
         // Array med citat
         var quotes = [
             "The only way to do great work is to love what you do. - Steve Jobs",
@@ -161,6 +174,11 @@
             var quoteElement = document.getElementById("quote");
             quoteElement.textContent = randomQuote;
         }
+
+
+       
+
+
     </script>
 
 </section>
