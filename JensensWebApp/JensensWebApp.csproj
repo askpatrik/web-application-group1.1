@@ -6,4 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\data\javascript.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\data\javascript.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\data\javascript.js" />
+  </ItemGroup>
+
 </Project>
