@@ -23,6 +23,11 @@ for details on configuring this project to bundle and minify static web assets. 
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+
+ .navbar.dark-mode {
+        background-color: #333;
+        color: #ffffff;
+ }
 .navbar-nav {
     font-size: large;
     font-weight: 700;
@@ -54,3 +59,4 @@ for details on configuring this project to bundle and minify static web assets. 
    justify-content: center;
     margin-top:20px;
 }
+

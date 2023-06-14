@@ -54,6 +54,17 @@ p {
 }
 
 
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode {
+    background-color: #333333;
+
+}
+
+
 
 
 
@@ -99,6 +110,7 @@ p {
   object-fit: contain; 
   margin-right: 25px;
   
+<<<<<<< HEAD
 }
 
 .ad-container img:hover {
@@ -114,3 +126,13 @@ p {
 }
 
 
+=======
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+>>>>>>> ccf7809048eb1ded5a5d0ac277d7c2a601cf5ca2

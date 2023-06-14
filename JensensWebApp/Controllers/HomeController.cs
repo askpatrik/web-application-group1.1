@@ -194,7 +194,7 @@ namespace JensensWebApp.Controllers
     {"SamhalleKonflikter", "Samhälle och Konflikter"},
     {"Miljo", "Miljö"},
     {"VetenskapTeknik", "Vetenskap och Teknik"},
-    {"LivsstillFritt", "Livsstil och Fritid"},
+    {"LivsstillFritt", "Livsstil"},
     {"Ekonomi", "Ekonomi"},
     {"Religion", "Religion"},
     {"Idrott", "Idrott"}
@@ -215,4 +215,5 @@ namespace JensensWebApp.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
+
 }
