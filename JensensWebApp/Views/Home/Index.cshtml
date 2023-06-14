@@ -6,6 +6,10 @@
  var topicDisplayNames = ViewBag.TopicDisplayNames as Dictionary<string, string>;
 }
 
+
+
+
+
 <!-- Main Article RAD 1-->
 <div class="row mt-5 ">
     <div class="col-md-8">
@@ -43,6 +47,7 @@
                     }
                 </tbody>
             </table>
+            
         </div>
     </div>
 
@@ -51,6 +56,7 @@
 
 <!-- Form RAD 1 -->
 <div class="card mt-4">
+    
     <div class="card-title-2">SÖK NYHETER</div>
     <div class="card-body">
       
@@ -81,8 +87,25 @@
 
     </div>
 
+<!-- Quote Randomizer-->
+    <div class="row">
+    <div class="col-4">
+        
+    <button class="buttonQuote" onclick="generateRandomQuote()"> KLICKA FÖR INSPIRATION </button>
+    <p id="quote"></p>
+    </div>
 
-    
+<!-- ReklamCarousel-->
+<div class="col-8">
+    <div class="ad-carousel">
+        <div id="adContainer" class="ad-container">
+        <img src="Pictures/ad1.png" alt="Reklam 1">
+         <img src="Pictures/ad2.jpg" alt="Reklam 2">
+          <img src="Pictures/ad3.png" alt="Reklam 3">
+         <img src="Pictures/ad4.jpg" alt="Reklam 4">
+        </div>
+    </div>
+</div>
 
 
 <!-- Mellanstora artiklar RAD 2-->
@@ -124,7 +147,41 @@
     </div>
 </div>
 
+   <script>
+        // Reklam-carousel stannar när man hovrar över den 
+        var carousel = document.getElementById('adContainer');
+        carousel.addEventListener("mouseenter", function() {
+        carousel.style.animationPlayState = "paused";
+            });
+        carousel.addEventListener('mouseleave', function() {        
+        carousel.style.animationPlayState = 'running';
+            });
 
+
+        // Array med citat
+        var quotes = [
+            "The only way to do great work is to love what you do. - Steve Jobs",
+            "Success is not the key to happiness. Happiness is the key to success. - Albert Schweitzer",
+            "Innovation distinguishes between a leader and a follower. - Steve Jobs",
+            "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+            "Believe you can and you're halfway there. - Theodore Roosevelt"
+        ];
+
+        function generateRandomQuote() {
+            // Generera slumpmässigt index
+            var randomIndex = Math.floor(Math.random() * quotes.length);
+            var randomQuote = quotes[randomIndex];
+
+            // Visa citatet på sidan
+            var quoteElement = document.getElementById("quote");
+            quoteElement.textContent = randomQuote;
+        }
+
+
+       
+
+
+    </script>
 
 </section>
 <button id="darkModeBtn">Toggle Dark Mode</button>
