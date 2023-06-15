@@ -1,3 +1,41 @@
+/* Main news styling*/
+.main-news-banner {
+  background-color: rgb(161, 48, 48);
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+.main-news-read-more {
+  text-decoration: none;
+  color: black;
+}
+
+.main-news-read-more:hover {
+  text-decoration: underline;
+  color: black;
+}
+.main-news-title {
+  font-size: 42px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main-news-img {
+  width: 100%;
+  height: auto;
+}
+
+/* Article styling*/
+.card-title-2{
+  background-color: rgb(161, 48, 48);
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+}
+
+
 p {
     color: rgb(46, 73, 206);
     font-size: large;
@@ -7,34 +45,10 @@ p {
     background-color: rgb(244, 248, 244);
 }
 
-.main-news-img {
-    width: 100%;
-    height: auto;
-}
 
-.main-news-title {
-    font-size: 42px;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
-.main-news-read-more {
-    text-decoration: none;
-    color: black;
-}
 
-.main-news-read-more:hover {
-    text-decoration: underline;
-    color: black;
-}
 
-.main-news-banner {
-    background-color: rgb(161, 48, 48);
-    font-size: 50px;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-}
 
 .td-style a{ 
 font-size: 20px;
@@ -42,14 +56,6 @@ font-size: 20px;
 }
    
 
-.card-title-2{
-    background-color: rgb(161, 48, 48);
-    color: white;
-    font-size: 25px;
-    text-align: center;
-    font-weight: bold;
-    padding: 10px;
-}
 
 .td-style{
     font-size: 16px;

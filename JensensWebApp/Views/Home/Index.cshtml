@@ -1,56 +1,43 @@
 ﻿@model IList<JensensWebApp.Models.Article>
-
-
 @{
     ViewBag.Title = "Articles";
- var topicDisplayNames = ViewBag.TopicDisplayNames as Dictionary<string, string>;
+    var topicDisplayNames = ViewBag.TopicDisplayNames as Dictionary<string, string>;
 }
 
-
-
-
-
 <!-- Main Article RAD 1-->
-<div class="row mt-5 ">
-    <div class="col-md-7">
-        <div class="card mb-4">
+<div class="row mt-5">
+    <div class="col-7">
+        <div class="card">
             <div class="main-news-banner">HUVUDNYHETER</div>
-            <a href="@Model[0].Link" target="_blank" class="card-link main-news-read-more">
-                <img src="Pictures/NEWS.png" alt="Bildbeskrivning" class="card-img-top">
+            <a href="@Model[0].Link" class="main-news-read-more">
+                <img src="Pictures/NEWS.png" alt="Huvudnyhetsbild" class="main-news-img">
                 <div class="card-body">
-                    <h5 class="card-title main-news-title">@Model[0].Title</h5>
-                    <p class="card-text main-news-summary">@Model[0].Summary</p>
-                    
-                </div>
-                
-            </a>
-            
+                    <h5 class="main-news-title">@Model[0].Title</h5>
+                    <p class="main-news-summary">@Model[0].Summary</p>                  
+                </div>               
+            </a>           
         </div>
     </div>
 
-<!-- Senaste nytt RAD 1 -->
-<div class="col">
-    <div class="card">
-            
-         <div class="card-title-2">SENASTE NYTT</div>
-        <div class="card-body">
-           
-            <table class="table">
-                <tbody>
-                    @foreach (var article in Model.Take(10))
-                    {
-                        <tr>
-                            <td class="td-style"><a href="@article.Link">@article.Title</a></td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-            
+    <!-- Senaste nytt RAD 1 -->
+    <div class="col">
+        <div class="card">
+            <div class="card-title-2">SENASTE NYTT</div>
+                <div class="card-body">
+                <table class="table">
+                    <tbody>
+                        @foreach (var article in Model.Take(10))
+                        {
+                            <tr>
+                                <td class="td-style"><a href="@article.Link">@article.Title</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-
-
-<div class="date-box">
+        
+            <div class="date-box">
                Dagens datum: <br /> @DateTime.Now.ToString("yyyy-MM-dd")
             </div>
 
