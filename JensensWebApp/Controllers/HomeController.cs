@@ -214,6 +214,24 @@ namespace JensensWebApp.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+           public IActionResult InfiniteScroll()
+        {
+                            Dictionary<string, string> topicDisplayNames = new Dictionary<string, string>
+{
+    {"Halsa", "Hälsa"},
+    {"SamhalleKonflikter", "Samhälle och Konflikter"},
+    {"Miljo", "Miljö"},
+    {"VetenskapTeknik", "Vetenskap och Teknik"},
+    {"LivsstillFritt", "Livsstil"},
+    {"Ekonomi", "Ekonomi"},
+    {"Religion", "Religion"},
+    {"Idrott", "Idrott"}
+};
+  ViewBag.TopicDisplayNames = topicDisplayNames;
+var articles = _articles;
+            return View(articles);
+        }
+         
     }
 
 }

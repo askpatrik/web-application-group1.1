@@ -35,11 +35,13 @@ p {
     padding: 10px;
     font-weight: bold;
 }
-.table{
-   
-    color: rgb(0, 0, 0);
-   
+
+.td-style a{ 
+font-size: 20px;
+
 }
+   
+
 .card-title-2{
     background-color: rgb(161, 48, 48);
     color: white;
@@ -64,34 +66,52 @@ body.dark-mode {
 
 }
 
+.image {
+  max-width: 100%; /* Set the maximum width to 100% of the parent container */
+  max-height: 100%; /* Set the maximum height to 100% of the parent container */
+}
 
 
 
 
 #quote
 {
-    color: blue;
-    background-color: white; 
-    font-size: 16px; 
+    color: rgb(161, 48, 48);
+    background-color: rgb(226, 178, 178); 
+    font-size: 25px; 
     padding: 10px 20px; 
     border: none; 
     text-align: center;
 }
 .buttonQuote {
     color: white;
-    background-color: blue; 
-    font-size: 16px; 
-    padding: 20px 20px; 
+    background-color: rgb(161, 48, 48);
+    font-size: 25px; 
+    padding: 10px 20px; 
     border: none; 
-    margin-left: 80px;
+    width: 100%;
+    
+    
     
 }
+.date-box {
+  color: rgb(161, 48, 48);
+  background-color: rgb(244, 248, 244);
+  font-size: 40px;
+  font-weight: initial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .ad-carousel {
   width: 100%;
   height: 100px;
   overflow: hidden;
   position: relative;
+  margin-top: 15px;
+  margin-bottom: 15px;
  
 }
 
@@ -110,7 +130,6 @@ body.dark-mode {
   object-fit: contain; 
   margin-right: 25px;
   
-<<<<<<< HEAD
 }
 
 .ad-container img:hover {
@@ -118,7 +137,7 @@ body.dark-mode {
 }
 @keyframes scroll {
   0% {
-    transform: translateX(75%);
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(-100%);
@@ -126,13 +145,3 @@ body.dark-mode {
 }
 
 
-=======
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
->>>>>>> ccf7809048eb1ded5a5d0ac277d7c2a601cf5ca2
