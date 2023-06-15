@@ -16,37 +16,40 @@
 </head>
 <body>
     <header>
-        <nav class="navbar  navbar-expand-sm">
+        <nav id="navbar" class="navbar navbar-expand-sm">
             <!--Bootstrap Css, en nav bar och gör att Ul går åt sidan..-->
             <div class="container-sm custom-container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/Pictures/MVCN.png" alt="logo"style="width: 77px; height: 76px;"/></a> <!--Bootstrap namn och logo..-->
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/Pictures/MVCN.png" alt="light-mode-logo" class="logo-light-mode" style="width: 77px; height: 76px;" />
+                    <img src="~/Pictures/MVC.jpg" alt="dark-mode-logo" class="logo-dark-mode" style="width: 77px; height: 76px;" />
+                </a>
+                <!--Bootstrap namn och logo..-->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["Halsa"]</a>
+                        <a class="nav-link nav-link-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["Halsa"]</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["SamhalleKonflikter"]</a>
+                        <a class="nav-link nav-link-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["SamhalleKonflikter"]</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["Miljo"]</a>
+                        <a class="nav-link nav-link-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["Miljo"]</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["VetenskapTeknik"]</a>
-                    </li>
-
+                        <a class="nav-link nav-link-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["VetenskapTeknik"]</a>
+                    </li>          
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["LivsstillFritt"]</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["Ekonomi"]</a>
+                        <a class="nav-link nav-link-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["LivsstillFritt"]</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["Religion"]</a>
+                        <a class="nav-link nav-link-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["Ekonomi"]</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["Religion"]</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["Idrott"]</a>
+                        <a class="nav-link nav-link-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@topicDisplayNames["Idrott"]</a>
                     </li>
 
                 </ul>

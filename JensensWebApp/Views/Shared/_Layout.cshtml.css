@@ -60,3 +60,7 @@ for details on configuring this project to bundle and minify static web assets. 
     margin-top:20px;
 }
 
+#darkmodebtn
+{
+    background-color:black;
+}

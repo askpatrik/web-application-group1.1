@@ -56,16 +56,56 @@ font-size: 20px;
 }
 
 
-body.light-mode {
+body.light-mode .card-body{
     background-color: #ffffff;
     color: #000000;
 }
 
-body.dark-mode {
+body.dark-mode .card-body{
     background-color: #333333;
-
+    color: #ffffff;
 }
 
+body.light-mode .navbar-nav .nav-link,
+body.light-mode .nav-link.nav-link-dark {
+    color: #000000; /* Set the text color to black in light mode */
+}
+
+/* Override the styles for .nav-link in dark mode */
+body.dark-mode .navbar-nav .nav-link,
+body.dark-mode .nav-link.nav-link-dark {
+    color: #ffffff; /* Set the text color to white in dark mode */
+}
+
+/* Set the default text color to black */
+.navbar-nav .nav-link,
+.nav-link.nav-link-dark {
+    color: #000000;
+}
+
+.logo-dark-mode {
+    display: none; 
+}
+
+.logo-light-mode {
+    display: block; /* Show the light mode logo by default */
+}
+
+body.dark-mode .logo-dark-mode {
+    display: block; /* Show the dark mode logo in dark mode */
+}
+
+body.dark-mode .logo-light-mode {
+    display: none; 
+}
+
+body {
+    background-color: #fff; /* Set the default background color to white */
+}
+
+    body.dark-mode {
+        background-color: #333; /* Set the background color to dark in dark mode */
+    }
 .image {
   max-width: 100%; /* Set the maximum width to 100% of the parent container */
   max-height: 100%; /* Set the maximum height to 100% of the parent container */
@@ -97,7 +137,7 @@ body.dark-mode {
 .date-box {
   color: rgb(161, 48, 48);
   background-color: rgb(244, 248, 244);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: initial;
   display: flex;
   justify-content: center;
